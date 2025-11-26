@@ -115,7 +115,7 @@ Fork this repository. Use these JSON files as the configuration layer in your CI
 
 ### Option B: The Reference Implementation
 
-If you prefer a managed "Headless Governance" layer that natively supports OGS and handles the sync to Power BI/dbt automatically, first see the art of possible with **[Chartr Project](https://chartr.quirkyswirl.com/)** (Commercial Managed Services - coming soon).
+If you prefer a managed "Headless Governance" layer that natively supports ODGS and handles the sync to Power BI/dbt automatically, feel free to see the art of possible -  with **[Chartr Project](https://chartr.quirkyswirl.com/)** (Commercially Managed Services - coming soon). 
 
 -----
 
