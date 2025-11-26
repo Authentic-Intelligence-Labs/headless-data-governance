@@ -1,10 +1,12 @@
 # 🏛️ The Open Governance Schema (OGS)
-> The "HTML" for Business Logic.
+> **The Open Standard for Headless Metric Definitions**  
+> Decouples Business Logic from BI Tools
 
 [![Build Status](https://img.shields.io/badge/build-passing-brightgreen)]()
 [![Standard](https://img.shields.io/badge/standard-OGS_v1.0-blue)]()
 [![Maintained by](https://img.shields.io/badge/maintained%20by-QuirkySwirl-orange)](https://definitions.quirkyswirl.com)
-**The open standard for "Headless" Data Governance.**
+
+
 
 [](https://opensource.org/licenses/MIT) [](https://json.org)
 
@@ -47,6 +49,39 @@ This repository contains the core schemas that define the "Alphabet" of Data Gov
 | **`standard_data_rules.json`** | Technical validation rules (Regex patterns, null checks, referential integrity). |
 | **`root_cause_factors.json`** | A standardized taxonomy for *why* data breaks (e.g., `Process_Gap` vs `Integration_Failure`). |
 | **`business_process_maps.json`** | Maps how data entities flow through the business lifecycle. |
+
+## ✅ Validation & CI/CD Integration
+
+The repository includes a **validator script** that enforces the governance schema:
+
+```bash
+python3 validate_schema.py
+```
+
+**Output:**
+```
+🔍 Running Open Governance Schema Validator...
+✅ Loaded 72 metrics.
+✅ Loaded 50 data rules.
+🎉 All Governance Checks Passed!
+```
+
+### CI/CD Integration
+
+Add this to your GitHub Actions workflow to enforce governance standards:
+
+```yaml
+- name: Validate Governance Schema
+  run: python3 validate_schema.py
+```
+
+This ensures that all metrics and rules have:
+- Unique IDs
+- Assigned owners
+- Defined domains
+- Clear calculation logic
+
+---
 
 ## 🛠 Usage & Implementation
 
