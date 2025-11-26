@@ -6,7 +6,9 @@
 [![Standard](https://img.shields.io/badge/standard-OGS_v1.0-blue)]()
 [![Maintained by](https://img.shields.io/badge/maintained%20by-QuirkySwirl-orange)](https://definitions.quirkyswirl.com)
 
-[](https://opensource.org/licenses/MIT) [](https://json.org)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![JSON](https://img.shields.io/badge/format-JSON-lightgrey)](https://json.org)
+
 ![Infographic](https://res.cloudinary.com/dcfadz2uh/image/upload/v1764179467/infographic-bdm_poo64c.jpg)
 
 ## 📉 The Problem: Definition Drift
@@ -117,8 +119,12 @@ If you prefer a managed "Headless Governance" layer that natively supports OGS a
 
 -----
 
-## Contributing
+## 📄 License
 
-This is an open standard. We welcome Pull Requests to expand the `dq_dimensions` or refine the `root_cause_factors` taxonomy.
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
 
-*Released under the MIT License.*
+Copyright © 2025 [Authentic Intelligence Labs](https://github.com/Authentic-Intelligence-Labs)
+
+---
+
+**Contributing:** We welcome Pull Requests to expand the `dq_dimensions` or refine the `root_cause_factors` taxonomy.
