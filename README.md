@@ -6,9 +6,7 @@
 [![Standard](https://img.shields.io/badge/standard-OGS_v1.0-blue)]()
 [![Maintained by](https://img.shields.io/badge/maintained%20by-QuirkySwirl-orange)](https://definitions.quirkyswirl.com)
 
-
-
-[OGS](https://opensource.org/licenses/MIT) [JSON](https://json.org)
+[](https://opensource.org/licenses/MIT) [](https://json.org)
 ![Headless Data Governance](https://res.cloudinary.com/dcfadz2uh/image/upload/v1764172903/headless-data-governance_tbli5k.png)
 ## 📉 The Problem: Definition Drift
 
