@@ -1,4 +1,6 @@
 # 🏛️ The Open Data Governance Schema (ODGS)
+
+![Infographic](https://res.cloudinary.com/dcfadz2uh/image/upload/v1764220237/infographic-bdm-potrait-reduced_flwuu3.jpg)
 > **The Open Standard for Headless Data Governance**  
 > Decouples Business Logic from BI Tools
 
@@ -8,8 +10,6 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![JSON](https://img.shields.io/badge/format-JSON-lightgrey)](https://json.org)
-
-![Infographic](https://res.cloudinary.com/dcfadz2uh/image/upload/v1764220237/infographic-bdm-potrait-reduced_flwuu3.jpg)
 
 ## 📉 The Problem: Definition Drift
 
