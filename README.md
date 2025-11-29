@@ -1,5 +1,7 @@
 # 🏛️ The Open Data Governance Schema (ODGS)
+![What is it?](https://res.cloudinary.com/drsprx7wk/image/upload/v1764393765/BDM-1pagervisual_pszjuq.png)
 
+# 🧩 The Problem: Definition Drift
 ![Infographic](https://res.cloudinary.com/dcfadz2uh/image/upload/v1764220237/infographic-bdm-potrait-reduced_flwuu3.jpg)
 > **The Open Standard for Headless Data Governance**  
 > Decouples Business Logic from BI Tools
