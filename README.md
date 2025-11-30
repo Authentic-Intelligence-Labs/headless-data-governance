@@ -15,7 +15,7 @@ It is time to decouple the **Definition** (The *What*) from the **Tool** (The *H
 
 Authentic Intelligence Labs introduces the Open Data Governance Schema (ODGS).  
 ODGS is a vendor-neutral, JSON-based protocol that acts as the API for your business logic.
-
+![headless architecture](https://res.cloudinary.com/drsprx7wk/image/upload/v1764513291/headless-architecure_ilnqfx.png)
 ### **The Protocol: Write Once, Sync Everywhere**
 
 Instead of defining "Revenue" three times (once in dbt, once in Looker, once in Excel), you define it once in ODGS.  
@@ -28,11 +28,10 @@ Our Sync Engine then compiles that definition into:
 
 ### **The Killer Feature: Metric Provenance**
 
-Generative AI is a "Reasoning Engine," not a "Knowledge Base." It is great at syntax, but terrible at facts.  
-When an executive asks, "What was our Churn last month?", the AI hallucinates because it sees three different "Churn" columns in your warehouse.  
-ODGS provides Metric Provenance.  
-It forces the AI to look up the human-codified definition first. It provides the "Chain of Custody" for your business logic, ensuring that every AI answer can be traced back to a specific, version-controlled definition in your Git repo.
+Generative AI is a "Reasoning Engine," not a "Knowledge Base." It is great at syntax, but terrible at facts.  When an executive asks, _"What was our Churn last month?"_, the AI hallucinates because it sees three different "Churn" columns in your warehouse.  
 
+ODGS provides **Metric Provenance**. It forces the AI to look up the _human-codified definition_ first. It provides the **Chain of Custody** for your business logic, ensuring that every AI answer can be traced back to a specific, version-controlled definition in your Git repo.
+![metric provenance](https://res.cloudinary.com/drsprx7wk/image/upload/v1764513291/MetricProvenanceFlow_tq90mh.png)
 ### **Why "Authentic Intelligence"?**
 
 We believe AI is only as good as the rules you give it.
