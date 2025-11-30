@@ -2,6 +2,18 @@ import json
 import os
 import sys
 
+# Get project root (parent of scripts dir)
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+def load_json(filename):
+    path = os.path.join(PROJECT_ROOT, filename)
+    try:
+        with open(path, 'r') as f:
+            return json.load(f)
+    except FileNotFoundError:
+        print(f"❌ Error: Could not find {filename} at {path}")
+        raise
+
 def validate_metric(metric):
     required_fields = ["metric_id", "name", "domain", "calculation_logic", "owner"]
     issues = []
@@ -24,8 +36,7 @@ def main():
     
     # Validate Standard Metrics
     try:
-        with open('standard_metrics.json', 'r') as f:
-            metrics = json.load(f)
+        metrics = load_json('standard_metrics.json')
             
         print(f"✅ Loaded {len(metrics)} metrics.")
         
@@ -41,8 +52,7 @@ def main():
 
     # Validate Standard Data Rules
     try:
-        with open('standard_data_rules.json', 'r') as f:
-            rules = json.load(f)
+        rules = load_json('standard_data_rules.json')
             
         print(f"✅ Loaded {len(rules)} data rules.")
         
@@ -64,4 +74,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

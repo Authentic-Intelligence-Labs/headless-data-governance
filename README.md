@@ -1,7 +1,55 @@
+# **The Open Governance Manifesto**
+
+### **Data is an Asset. Your Definitions are a Liability.**
+
+We have spent the last decade solving the **Storage Problem**. Thanks to Apache Iceberg and Delta Lake, we can now store petabytes of data cheaply and reliably.
+
+But we are still failing at the **Meaning Problem**.
+
+Ask your Data Engineer for "Gross Churn" and you get one number. Ask your Tableau dashboard and you get another. Ask your Finance team and you get a third.  
+This is Metric Drift. And in the age of AI, Metric Drift is fatal. If you feed conflicting definitions to an LLM, you don't get "Business Intelligence"—you get confident hallucinations.
+
+## **The Solution: Headless Data Governance**
+
+It is time to decouple the **Definition** (The *What*) from the **Tool** (The *How*).
+
+Authentic Intelligence Labs introduces the Open Data Governance Schema (ODGS).  
+ODGS is a vendor-neutral, JSON-based protocol that acts as the API for your business logic.
+
+### **The Protocol: Write Once, Sync Everywhere**
+
+Instead of defining "Revenue" three times (once in dbt, once in Looker, once in Excel), you define it once in ODGS.  
+Our Sync Engine then compiles that definition into:
+
+* SQL for your Data Warehouse (Snowflake/Databricks)  
+* LookML for Looker  
+* DAX for Power BI  
+* **Semantic Context for your AI Agents**
+
+### **The Killer Feature: Metric Provenance**
+
+Generative AI is a "Reasoning Engine," not a "Knowledge Base." It is great at syntax, but terrible at facts.  
+When an executive asks, "What was our Churn last month?", the AI hallucinates because it sees three different "Churn" columns in your warehouse.  
+ODGS provides Metric Provenance.  
+It forces the AI to look up the human-codified definition first. It provides the "Chain of Custody" for your business logic, ensuring that every AI answer can be traced back to a specific, version-controlled definition in your Git repo.
+
+### **Why "Authentic Intelligence"?**
+
+We believe AI is only as good as the rules you give it.
+
+* **Artificial Intelligence** guesses the answer based on probability.  
+* **Authentic Intelligence** knows the answer based on codified human expertise.
+
+ODGS captures the *Authentic Intelligence* of your domain experts—the nuances, the exceptions, the business rules—and codifies them into a standard that AI can respect.
+
+### **Join the Revolution**
+
+The Table Format War is over. The Semantic War has just begun.  
+Don't build another silo. Build on the Standard.
 # 🏛️ The Open Data Governance Schema (ODGS)
 ![What is it?](https://res.cloudinary.com/drsprx7wk/image/upload/v1764393765/BDM-1pagervisual_pszjuq.png)
 
-# 🧩 Why Now, why this?
+# 🧩 Why now, why this?
 ![Infographic](https://res.cloudinary.com/dcfadz2uh/image/upload/v1764220237/infographic-bdm-potrait-reduced_flwuu3.jpg)
 > **The Open Standard for Headless Data Governance**  
 > Decouples Business Logic from BI Tools
@@ -81,7 +129,7 @@ This repository contains the core schemas that define the "Alphabet" of Data Gov
 The repository includes a **validator script** that enforces the governance schema:
 
 ```bash
-python3 validate_schema.py
+python3 scripts/validate_schema.py
 ```
 
 **Output:**
@@ -98,7 +146,7 @@ Add this to your GitHub Actions workflow to enforce governance standards:
 
 ```yaml
 - name: Validate Governance Schema
-  run: python3 validate_schema.py
+  run: python3 scripts/validate_schema.py
 ```
 
 This ensures that all metrics and rules have:
@@ -108,6 +156,32 @@ This ensures that all metrics and rules have:
 - Clear calculation logic
 
 ---
+
+## 📦 Installation
+
+### NPM (Node.js)
+
+```bash
+npm install odgs
+```
+
+Usage:
+```javascript
+import { standardMetrics } from 'odgs';
+// or
+const { standardMetrics } = require('odgs');
+```
+
+### PyPI (Python)
+
+```bash
+pip install odgs
+```
+
+Usage:
+```python
+from odgs import standard_metrics
+```
 
 ## 🛠 Usage & Implementation
 
