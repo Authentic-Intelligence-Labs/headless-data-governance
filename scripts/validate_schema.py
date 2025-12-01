@@ -20,6 +20,16 @@ def validate_metric(metric):
     for field in required_fields:
         if field not in metric:
             issues.append(f"Missing required field: {field}")
+            
+    # Validate calculation_logic structure
+    if "calculation_logic" in metric:
+        logic = metric["calculation_logic"]
+        if not isinstance(logic, dict):
+             issues.append("calculation_logic must be an object")
+        else:
+            if "abstract" not in logic:
+                issues.append("calculation_logic missing 'abstract' field")
+                
     return issues
 
 def validate_data_rule(rule):
@@ -30,7 +40,7 @@ def validate_data_rule(rule):
             issues.append(f"Missing required field: {field}")
     return issues
 
-def main():
+def validate_all():
     print("🔍 Running Open Governance Schema Validator...")
     has_error = False
     
@@ -67,10 +77,13 @@ def main():
         has_error = True
 
     if has_error:
-        sys.exit(1)
+        raise Exception("Validation failed. See logs for details.")
     else:
         print("🎉 All Governance Checks Passed!")
-        sys.exit(0)
 
 if __name__ == "__main__":
-    main()
+    try:
+        validate_all()
+        sys.exit(0)
+    except Exception:
+        sys.exit(1)

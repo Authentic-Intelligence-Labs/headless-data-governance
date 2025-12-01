@@ -3,7 +3,11 @@
     "metric_id": "101",
     "name": "Net Profit Margin",
     "domain": "Financial Performance",
-    "calculation_logic": "(Net Income / Revenue) * 100",
+    "calculation_logic": {
+      "abstract": "(Net Income / Revenue) * 100",
+      "sql_standard": "(SUM(net_income)/SUM(revenue))*100",
+      "dax_pattern": "DIVIDE([Net Income], [Revenue) * 100])"
+    },
     "owner": "TBD",
     "targetIndustries": [
       "All"
@@ -24,7 +28,11 @@
     "metric_id": "102",
     "name": "Return on Invested Capital (ROIC)",
     "domain": "Financial Performance",
-    "calculation_logic": "(Net Operating Profit After Tax) / (Total Debt + Total Equity)",
+    "calculation_logic": {
+      "abstract": "(Net Operating Profit After Tax) / (Total Debt + Total Equity)",
+      "sql_standard": "(SUM(net_operating_profit_after_tax))/(SUM(total_debt)+SUM(total_equity))",
+      "dax_pattern": "DIVIDE([Net Operating Profit After Tax], [Total Debt + Total Equity])"
+    },
     "owner": "TBD",
     "targetIndustries": [
       "All"
@@ -44,7 +52,11 @@
     "metric_id": "103",
     "name": "Free Cash Flow (FCF)",
     "domain": "Financial Performance",
-    "calculation_logic": "Operating Cash Flow - Capital Expenditures",
+    "calculation_logic": {
+      "abstract": "Operating Cash Flow - Capital Expenditures",
+      "sql_standard": "SUM(operating_cash_flow)-SUM(capital_expenditures)",
+      "dax_pattern": "[Operating Cash Flow]-[Capital Expenditures]"
+    },
     "owner": "TBD",
     "targetIndustries": [
       "All"
@@ -64,7 +76,11 @@
     "metric_id": "104",
     "name": "EBITDA Margin",
     "domain": "Financial Performance",
-    "calculation_logic": "(EBITDA / Revenue) * 100",
+    "calculation_logic": {
+      "abstract": "(EBITDA / Revenue) * 100",
+      "sql_standard": "(SUM(ebitda)/SUM(revenue))*100",
+      "dax_pattern": "DIVIDE([EBITDA], [Revenue) * 100])"
+    },
     "owner": "TBD",
     "targetIndustries": [
       "All"
@@ -84,7 +100,11 @@
     "metric_id": "105",
     "name": "Gross Profit Margin",
     "domain": "Financial Performance",
-    "calculation_logic": "((Revenue - Cost of Goods Sold) / Revenue) * 100",
+    "calculation_logic": {
+      "abstract": "((Revenue - Cost of Goods Sold) / Revenue) * 100",
+      "sql_standard": "((SUM(revenue)-SUM(cost_of_goods_sold))/SUM(revenue))*100",
+      "dax_pattern": "DIVIDE([Revenue - Cost of Goods Sold], [Revenue) * 100])"
+    },
     "owner": "TBD",
     "targetIndustries": [
       "All"
@@ -104,7 +124,11 @@
     "metric_id": "106",
     "name": "Working Capital Ratio",
     "domain": "Financial Performance",
-    "calculation_logic": "Current Assets / Current Liabilities",
+    "calculation_logic": {
+      "abstract": "Current Assets / Current Liabilities",
+      "sql_standard": "SUM(current_assets)/SUM(current_liabilities)",
+      "dax_pattern": "DIVIDE([Current Assets], [Current Liabilities])"
+    },
     "owner": "TBD",
     "targetIndustries": [
       "All"
@@ -124,7 +148,11 @@
     "metric_id": "501",
     "name": "Employee Turnover Rate",
     "domain": "Human Resources",
-    "calculation_logic": "(Number of Employees Who Left / Average Number of Employees) * 100",
+    "calculation_logic": {
+      "abstract": "(Number of Employees Who Left / Average Number of Employees) * 100",
+      "sql_standard": "(SUM(number_of_employees_who_left)/SUM(average_number_of_employees))*100",
+      "dax_pattern": "DIVIDE([Number of Employees Who Left], [Average Number of Employees) * 100])"
+    },
     "owner": "TBD",
     "targetIndustries": [
       "All"
@@ -144,7 +172,11 @@
     "metric_id": "502",
     "name": "Lost Time Injury Frequency Rate (LTIFR)",
     "domain": "Health & Safety",
-    "calculation_logic": "(Number of Lost-Time Injuries / Total Hours Worked) * 1,000,000",
+    "calculation_logic": {
+      "abstract": "(Number of Lost-Time Injuries / Total Hours Worked) * 1,000,000",
+      "sql_standard": "(SUM(number_of_lost)-SUM(time_injuries)/SUM(total_hours_worked))*SUM(1,000,000)",
+      "dax_pattern": "DIVIDE([Number of Lost-Time Injuries], [Total Hours Worked) * 1,000,000])"
+    },
     "owner": "TBD",
     "targetIndustries": [
       "Transportation & Logistics",
@@ -167,7 +199,11 @@
     "metric_id": "503",
     "name": "Training Hours Per Employee",
     "domain": "Human Resources",
-    "calculation_logic": "Total Training Hours / Number of Employees",
+    "calculation_logic": {
+      "abstract": "Total Training Hours / Number of Employees",
+      "sql_standard": "SUM(total_training_hours)/SUM(number_of_employees)",
+      "dax_pattern": "DIVIDE([Total Training Hours], [Number of Employees])"
+    },
     "owner": "TBD",
     "targetIndustries": [
       "All"
@@ -186,7 +222,11 @@
     "metric_id": "504",
     "name": "Absenteeism Rate",
     "domain": "Human Resources",
-    "calculation_logic": "(Total Days Absent / Total Available Work Days) * 100",
+    "calculation_logic": {
+      "abstract": "(Total Days Absent / Total Available Work Days) * 100",
+      "sql_standard": "(SUM(total_days_absent)/SUM(total_available_work_days))*100",
+      "dax_pattern": "DIVIDE([Total Days Absent], [Total Available Work Days) * 100])"
+    },
     "owner": "TBD",
     "targetIndustries": [
       "All"
@@ -206,7 +246,11 @@
     "metric_id": "601",
     "name": "IT System Uptime",
     "domain": "IT Operations",
-    "calculation_logic": "((Total Time - Downtime) / Total Time) * 100",
+    "calculation_logic": {
+      "abstract": "((Total Time - Downtime) / Total Time) * 100",
+      "sql_standard": "((SUM(total_time)-SUM(downtime))/SUM(total_time))*100",
+      "dax_pattern": "DIVIDE([Total Time - Downtime], [Total Time) * 100])"
+    },
     "owner": "TBD",
     "targetIndustries": [
       "All"
@@ -225,7 +269,11 @@
     "metric_id": "602",
     "name": "Mean Time To Repair (MTTR)",
     "domain": "IT Operations",
-    "calculation_logic": "Total Repair Time / Number of Repairs",
+    "calculation_logic": {
+      "abstract": "Total Repair Time / Number of Repairs",
+      "sql_standard": "SUM(total_repair_time)/SUM(number_of_repairs)",
+      "dax_pattern": "DIVIDE([Total Repair Time], [Number of Repairs])"
+    },
     "owner": "TBD",
     "targetIndustries": [
       "All"
@@ -244,7 +292,11 @@
     "metric_id": "603",
     "name": "Cybersecurity Incident Rate",
     "domain": "IT Security",
-    "calculation_logic": "Number of Security Incidents / Time Period",
+    "calculation_logic": {
+      "abstract": "Number of Security Incidents / Time Period",
+      "sql_standard": "SUM(number_of_security_incidents)/SUM(time_period)",
+      "dax_pattern": "DIVIDE([Number of Security Incidents], [Time Period])"
+    },
     "owner": "TBD",
     "targetIndustries": [
       "All"
@@ -264,7 +316,11 @@
     "metric_id": "1001",
     "name": "Warehouse Dwell Time (Import)",
     "domain": "Operational Efficiency",
-    "calculation_logic": "Average(Gate-Out Timestamp - Discharge Timestamp)",
+    "calculation_logic": {
+      "abstract": "Average(Gate-Out Timestamp - Discharge Timestamp)",
+      "sql_standard": "SUM(average)(SUM(gate)-SUM(out_timestamp)-SUM(discharge_timestamp))",
+      "dax_pattern": "[Average]([Gate]-[Out Timestamp]-[Discharge Timestamp])"
+    },
     "owner": "TBD",
     "targetIndustries": [
       "Transportation & Logistics"
@@ -285,7 +341,11 @@
     "metric_id": "1002",
     "name": "Dock Moves Per Hour (BMPH)",
     "domain": "Asset Productivity",
-    "calculation_logic": "Total Package Moves / (Transport Unit Departure Time - Transport Unit Arrival Time)",
+    "calculation_logic": {
+      "abstract": "Total Package Moves / (Transport Unit Departure Time - Transport Unit Arrival Time)",
+      "sql_standard": "SUM(total_package_moves)/(SUM(transport_unit_departure_time)-SUM(transport_unit_arrival_time))",
+      "dax_pattern": "DIVIDE([Total Package Moves], [Transport Unit Departure Time - Transport Unit Arrival Time])"
+    },
     "owner": "TBD",
     "targetIndustries": [
       "Transportation & Logistics"
@@ -305,7 +365,11 @@
     "metric_id": "1003",
     "name": "Truck Turnaround Time",
     "domain": "Operational Efficiency",
-    "calculation_logic": "Average(Gate-Out Timestamp - Gate-In Timestamp)",
+    "calculation_logic": {
+      "abstract": "Average(Gate-Out Timestamp - Gate-In Timestamp)",
+      "sql_standard": "SUM(average)(SUM(gate)-SUM(out_timestamp)-SUM(gate)-SUM(in_timestamp))",
+      "dax_pattern": "[Average]([Gate]-[Out Timestamp]-[Gate]-[In Timestamp])"
+    },
     "owner": "TBD",
     "targetIndustries": [
       "Transportation & Logistics"
@@ -325,7 +389,11 @@
     "metric_id": "1004",
     "name": "On-Time Performance (Transport Unit/Flight/Truck)",
     "domain": "Service Level",
-    "calculation_logic": "(Number of On-Time Events / Total Number of Events) * 100",
+    "calculation_logic": {
+      "abstract": "(Number of On-Time Events / Total Number of Events) * 100",
+      "sql_standard": "(SUM(number_of_on)-SUM(time_events)/SUM(total_number_of_events))*100",
+      "dax_pattern": "DIVIDE([Number of On-Time Events], [Total Number of Events) * 100])"
+    },
     "owner": "TBD",
     "targetIndustries": [
       "Transportation & Logistics"
@@ -345,7 +413,11 @@
     "metric_id": "1005",
     "name": "Cargo Damage Rate",
     "domain": "Quality Management",
-    "calculation_logic": "(Number of Damaged Units / Total Units Handled) * 100",
+    "calculation_logic": {
+      "abstract": "(Number of Damaged Units / Total Units Handled) * 100",
+      "sql_standard": "(SUM(number_of_damaged_units)/SUM(total_units_handled))*100",
+      "dax_pattern": "DIVIDE([Number of Damaged Units], [Total Units Handled) * 100])"
+    },
     "owner": "TBD",
     "targetIndustries": [
       "Transportation & Logistics"
@@ -365,7 +437,11 @@
     "metric_id": "1006",
     "name": "Transport Unit Turnaround Time",
     "domain": "Operational Efficiency",
-    "calculation_logic": "Transport Unit Departure Time - Dock Arrival Time",
+    "calculation_logic": {
+      "abstract": "Transport Unit Departure Time - Dock Arrival Time",
+      "sql_standard": "SUM(transport_unit_departure_time)-SUM(dock_arrival_time)",
+      "dax_pattern": "[Transport Unit Departure Time]-[Dock Arrival Time]"
+    },
     "owner": "TBD",
     "targetIndustries": [
       "Transportation & Logistics"
@@ -385,7 +461,11 @@
     "metric_id": "1007",
     "name": "Fleet Utilization Rate",
     "domain": "Asset Productivity",
-    "calculation_logic": "(Total Operating Hours / Total Available Hours) * 100",
+    "calculation_logic": {
+      "abstract": "(Total Operating Hours / Total Available Hours) * 100",
+      "sql_standard": "(SUM(total_operating_hours)/SUM(total_available_hours))*100",
+      "dax_pattern": "DIVIDE([Total Operating Hours], [Total Available Hours) * 100])"
+    },
     "owner": "TBD",
     "targetIndustries": [
       "Transportation & Logistics"
@@ -404,7 +484,11 @@
     "metric_id": "1008",
     "name": "Fuel Efficiency (MPG or L/100km)",
     "domain": "Cost Management",
-    "calculation_logic": "Total Distance Traveled / Total Fuel Consumed",
+    "calculation_logic": {
+      "abstract": "Total Distance Traveled / Total Fuel Consumed",
+      "sql_standard": "SUM(total_distance_traveled)/SUM(total_fuel_consumed)",
+      "dax_pattern": "DIVIDE([Total Distance Traveled], [Total Fuel Consumed])"
+    },
     "owner": "TBD",
     "targetIndustries": [
       "Transportation & Logistics"
@@ -424,7 +508,11 @@
     "metric_id": "2001",
     "name": "Overall Equipment Effectiveness (OEE)",
     "domain": "Asset Productivity",
-    "calculation_logic": "Availability Rate * Performance Rate * Quality Rate",
+    "calculation_logic": {
+      "abstract": "Availability Rate * Performance Rate * Quality Rate",
+      "sql_standard": "SUM(availability_rate)*SUM(performance_rate)*SUM(quality_rate)",
+      "dax_pattern": "[Availability Rate]*[Performance Rate]*[Quality Rate]"
+    },
     "owner": "TBD",
     "targetIndustries": [
       "Heavy Manufacturing",
@@ -445,7 +533,11 @@
     "metric_id": "2002",
     "name": "Manufacturing Cycle Time",
     "domain": "Operational Efficiency",
-    "calculation_logic": "Process Time + Move Time + Inspection Time + Queue Time",
+    "calculation_logic": {
+      "abstract": "Process Time + Move Time + Inspection Time + Queue Time",
+      "sql_standard": "SUM(process_time)+SUM(move_time)+SUM(inspection_time)+SUM(queue_time)",
+      "dax_pattern": "[Process Time]+[Move Time]+[Inspection Time]+[Queue Time]"
+    },
     "owner": "TBD",
     "targetIndustries": [
       "Heavy Manufacturing"
@@ -465,7 +557,11 @@
     "metric_id": "2003",
     "name": "First Pass Yield (FPY)",
     "domain": "Quality Management",
-    "calculation_logic": "(Units Completed without Rework / Total Units Started) * 100",
+    "calculation_logic": {
+      "abstract": "(Units Completed without Rework / Total Units Started) * 100",
+      "sql_standard": "(SUM(units_completed_without_rework)/SUM(total_units_started))*100",
+      "dax_pattern": "DIVIDE([Units Completed without Rework], [Total Units Started) * 100])"
+    },
     "owner": "TBD",
     "targetIndustries": [
       "Heavy Manufacturing",
@@ -485,7 +581,11 @@
     "metric_id": "2004",
     "name": "Scrap Rate",
     "domain": "Quality Management",
-    "calculation_logic": "(Weight of Scrap / Total Weight of Materials Used) * 100",
+    "calculation_logic": {
+      "abstract": "(Weight of Scrap / Total Weight of Materials Used) * 100",
+      "sql_standard": "(SUM(weight_of_scrap)/SUM(total_weight_of_materials_used))*100",
+      "dax_pattern": "DIVIDE([Weight of Scrap], [Total Weight of Materials Used) * 100])"
+    },
     "owner": "TBD",
     "targetIndustries": [
       "Heavy Manufacturing",
@@ -506,7 +606,11 @@
     "metric_id": "2005",
     "name": "Production Capacity Utilization",
     "domain": "Asset Productivity",
-    "calculation_logic": "(Actual Output / Maximum Possible Output) * 100",
+    "calculation_logic": {
+      "abstract": "(Actual Output / Maximum Possible Output) * 100",
+      "sql_standard": "(SUM(actual_output)/SUM(maximum_possible_output))*100",
+      "dax_pattern": "DIVIDE([Actual Output], [Maximum Possible Output) * 100])"
+    },
     "owner": "TBD",
     "targetIndustries": [
       "Heavy Manufacturing",
@@ -526,7 +630,11 @@
     "metric_id": "2006",
     "name": "Downtime Percentage",
     "domain": "Asset Reliability",
-    "calculation_logic": "(Downtime Hours / Scheduled Operating Hours) * 100",
+    "calculation_logic": {
+      "abstract": "(Downtime Hours / Scheduled Operating Hours) * 100",
+      "sql_standard": "(SUM(downtime_hours)/SUM(scheduled_operating_hours))*100",
+      "dax_pattern": "DIVIDE([Downtime Hours], [Scheduled Operating Hours) * 100])"
+    },
     "owner": "TBD",
     "targetIndustries": [
       "Heavy Manufacturing",
@@ -547,7 +655,11 @@
     "metric_id": "2007",
     "name": "Changeover Time",
     "domain": "Operational Efficiency",
-    "calculation_logic": "End of Last Good Part (Product A) to First Good Part (Product B)",
+    "calculation_logic": {
+      "abstract": "End of Last Good Part (Product A) to First Good Part (Product B)",
+      "sql_standard": "SUM(end_of_last_good_part)(SUM(product_a))SUM(to_first_good_part)(SUM(product_b))",
+      "dax_pattern": "[End of Last Good Part]([Product A])[to First Good Part]([Product B])"
+    },
     "owner": "TBD",
     "targetIndustries": [
       "Heavy Manufacturing",
@@ -567,7 +679,11 @@
     "metric_id": "2008",
     "name": "Maintenance Cost as % of Asset Value",
     "domain": "Cost Management",
-    "calculation_logic": "(Annual Maintenance Costs / Total Asset Replacement Value) * 100",
+    "calculation_logic": {
+      "abstract": "(Annual Maintenance Costs / Total Asset Replacement Value) * 100",
+      "sql_standard": "(SUM(annual_maintenance_costs)/SUM(total_asset_replacement_value))*100",
+      "dax_pattern": "DIVIDE([Annual Maintenance Costs], [Total Asset Replacement Value) * 100])"
+    },
     "owner": "TBD",
     "targetIndustries": [
       "Heavy Manufacturing",
@@ -588,7 +704,11 @@
     "metric_id": "3001",
     "name": "Asset Uptime",
     "domain": "Asset Reliability",
-    "calculation_logic": "((Scheduled Operating Time - Unscheduled Downtime) / Scheduled Operating Time) * 100",
+    "calculation_logic": {
+      "abstract": "((Scheduled Operating Time - Unscheduled Downtime) / Scheduled Operating Time) * 100",
+      "sql_standard": "((SUM(scheduled_operating_time)-SUM(unscheduled_downtime))/SUM(scheduled_operating_time))*100",
+      "dax_pattern": "DIVIDE([Scheduled Operating Time - Unscheduled Downtime], [Scheduled Operating Time) * 100])"
+    },
     "owner": "TBD",
     "targetIndustries": [
       "Energy & Utilities",
@@ -609,7 +729,11 @@
     "metric_id": "3002",
     "name": "Production Volume (Barrels/Day, MWh)",
     "domain": "Operational Output",
-    "calculation_logic": "Sum of Production over Period",
+    "calculation_logic": {
+      "abstract": "Sum of Production over Period",
+      "sql_standard": "SUM(sum_of_production_over_period)",
+      "dax_pattern": "[Sum of Production over Period]"
+    },
     "owner": "TBD",
     "targetIndustries": [
       "Energy & Utilities",
@@ -630,7 +754,11 @@
     "metric_id": "3003",
     "name": "Mean Time Between Failures (MTBF)",
     "domain": "Asset Reliability",
-    "calculation_logic": "Total Operational Time / Number of Failures",
+    "calculation_logic": {
+      "abstract": "Total Operational Time / Number of Failures",
+      "sql_standard": "SUM(total_operational_time)/SUM(number_of_failures)",
+      "dax_pattern": "DIVIDE([Total Operational Time], [Number of Failures])"
+    },
     "owner": "TBD",
     "targetIndustries": [
       "Energy & Utilities",
@@ -652,7 +780,11 @@
     "metric_id": "3004",
     "name": "Energy Intensity",
     "domain": "Sustainability",
-    "calculation_logic": "Total Energy Consumed (kWh) / Total Units Produced",
+    "calculation_logic": {
+      "abstract": "Total Energy Consumed (kWh) / Total Units Produced",
+      "sql_standard": "SUM(total_energy_consumed)(SUM(kwh))/SUM(total_units_produced)",
+      "dax_pattern": "DIVIDE([Total Energy Consumed (kWh], [Total Units Produced])"
+    },
     "owner": "TBD",
     "targetIndustries": [
       "Energy & Utilities",
@@ -672,7 +804,11 @@
     "metric_id": "3005",
     "name": "Generation Reliability",
     "domain": "Asset Reliability",
-    "calculation_logic": "((Available Hours - Forced Outage Hours) / Available Hours) * 100",
+    "calculation_logic": {
+      "abstract": "((Available Hours - Forced Outage Hours) / Available Hours) * 100",
+      "sql_standard": "((SUM(available_hours)-SUM(forced_outage_hours))/SUM(available_hours))*100",
+      "dax_pattern": "DIVIDE([Available Hours - Forced Outage Hours], [Available Hours) * 100])"
+    },
     "owner": "TBD",
     "targetIndustries": [
       "Energy & Utilities"
@@ -692,7 +828,11 @@
     "metric_id": "3006",
     "name": "Emissions Rate (CO2/Unit)",
     "domain": "Environmental Compliance",
-    "calculation_logic": "Total CO2 Emissions (tons) / Total Production (units)",
+    "calculation_logic": {
+      "abstract": "Total CO2 Emissions (tons) / Total Production (units)",
+      "sql_standard": "SUM(total_co2_emissions)(SUM(tons))/SUM(total_production)(SUM(units))",
+      "dax_pattern": "DIVIDE([Total CO2 Emissions (tons], [Total Production (units])"
+    },
     "owner": "TBD",
     "targetIndustries": [
       "Energy & Utilities",
@@ -713,7 +853,11 @@
     "metric_id": "3007",
     "name": "Water Usage Efficiency",
     "domain": "Environmental Compliance",
-    "calculation_logic": "Total Water Consumed (gallons) / Total Units Produced",
+    "calculation_logic": {
+      "abstract": "Total Water Consumed (gallons) / Total Units Produced",
+      "sql_standard": "SUM(total_water_consumed)(SUM(gallons))/SUM(total_units_produced)",
+      "dax_pattern": "DIVIDE([Total Water Consumed (gallons], [Total Units Produced])"
+    },
     "owner": "TBD",
     "targetIndustries": [
       "Energy & Utilities",
@@ -734,7 +878,11 @@
     "metric_id": "4001",
     "name": "Inventory Turnover",
     "domain": "Supply Chain Management",
-    "calculation_logic": "Cost of Goods Sold / Average Inventory",
+    "calculation_logic": {
+      "abstract": "Cost of Goods Sold / Average Inventory",
+      "sql_standard": "SUM(cost_of_goods_sold)/SUM(average_inventory)",
+      "dax_pattern": "DIVIDE([Cost of Goods Sold], [Average Inventory])"
+    },
     "owner": "TBD",
     "targetIndustries": [
       "Retail & CPG",
@@ -756,7 +904,11 @@
     "metric_id": "4002",
     "name": "Perfect Order Rate",
     "domain": "Service Level",
-    "calculation_logic": "(Number of Perfect Orders / Total Orders) * 100",
+    "calculation_logic": {
+      "abstract": "(Number of Perfect Orders / Total Orders) * 100",
+      "sql_standard": "(SUM(number_of_perfect_orders)/SUM(total_orders))*100",
+      "dax_pattern": "DIVIDE([Number of Perfect Orders], [Total Orders) * 100])"
+    },
     "owner": "TBD",
     "targetIndustries": [
       "Retail & CPG",
@@ -779,7 +931,11 @@
     "metric_id": "4003",
     "name": "Days of Supply (DOS)",
     "domain": "Supply Chain Management",
-    "calculation_logic": "Average Inventory / (Cost of Goods Sold / Number of Days in Period)",
+    "calculation_logic": {
+      "abstract": "Average Inventory / (Cost of Goods Sold / Number of Days in Period)",
+      "sql_standard": "SUM(average_inventory)/(SUM(cost_of_goods_sold)/SUM(number_of_days_in_period))",
+      "dax_pattern": "[Average Inventory]/([Cost of Goods Sold]/[Number of Days in Period])"
+    },
     "owner": "TBD",
     "targetIndustries": [
       "Retail & CPG",
@@ -799,7 +955,11 @@
     "metric_id": "4004",
     "name": "Order Fill Rate",
     "domain": "Service Level",
-    "calculation_logic": "(Orders Filled Completely / Total Orders) * 100",
+    "calculation_logic": {
+      "abstract": "(Orders Filled Completely / Total Orders) * 100",
+      "sql_standard": "(SUM(orders_filled_completely)/SUM(total_orders))*100",
+      "dax_pattern": "DIVIDE([Orders Filled Completely], [Total Orders) * 100])"
+    },
     "owner": "TBD",
     "targetIndustries": [
       "Retail & CPG",
@@ -820,7 +980,11 @@
     "metric_id": "4005",
     "name": "Stockout Rate",
     "domain": "Inventory Management",
-    "calculation_logic": "(Days Out of Stock / Total Days) * 100",
+    "calculation_logic": {
+      "abstract": "(Days Out of Stock / Total Days) * 100",
+      "sql_standard": "(SUM(days_out_of_stock)/SUM(total_days))*100",
+      "dax_pattern": "DIVIDE([Days Out of Stock], [Total Days) * 100])"
+    },
     "owner": "TBD",
     "targetIndustries": [
       "Retail & CPG"
@@ -840,7 +1004,11 @@
     "metric_id": "4006",
     "name": "Cash-to-Cash Cycle Time",
     "domain": "Working Capital",
-    "calculation_logic": "Days Inventory Outstanding + Days Sales Outstanding - Days Payable Outstanding",
+    "calculation_logic": {
+      "abstract": "Days Inventory Outstanding + Days Sales Outstanding - Days Payable Outstanding",
+      "sql_standard": "SUM(days_inventory_outstanding)+SUM(days_sales_outstanding)-SUM(days_payable_outstanding)",
+      "dax_pattern": "[Days Inventory Outstanding]+[Days Sales Outstanding]-[Days Payable Outstanding]"
+    },
     "owner": "TBD",
     "targetIndustries": [
       "All"
@@ -860,7 +1028,11 @@
     "metric_id": "4007",
     "name": "Supplier On-Time Delivery",
     "domain": "Supplier Performance",
-    "calculation_logic": "(On-Time Deliveries / Total Deliveries) * 100",
+    "calculation_logic": {
+      "abstract": "(On-Time Deliveries / Total Deliveries) * 100",
+      "sql_standard": "(SUM(on)-SUM(time_deliveries)/SUM(total_deliveries))*100",
+      "dax_pattern": "DIVIDE([On-Time Deliveries], [Total Deliveries) * 100])"
+    },
     "owner": "TBD",
     "targetIndustries": [
       "All"
@@ -880,7 +1052,11 @@
     "metric_id": "4008",
     "name": "Forecast Accuracy",
     "domain": "Demand Planning",
-    "calculation_logic": "100 - (ABS(Forecast - Actual) / Actual) * 100",
+    "calculation_logic": {
+      "abstract": "100 - (ABS(Forecast - Actual) / Actual) * 100",
+      "sql_standard": "100-(SUM(abs)(SUM(forecast)-SUM(actual))/SUM(actual))*100",
+      "dax_pattern": "DIVIDE([100 - (ABS(Forecast - Actual], [Actual) * 100])"
+    },
     "owner": "TBD",
     "targetIndustries": [
       "Retail & CPG",
@@ -900,7 +1076,11 @@
     "metric_id": "5001",
     "name": "Ore Recovery Rate",
     "domain": "Extraction Efficiency",
-    "calculation_logic": "(Recovered Mineral Weight / Total Mineral in Ore) * 100",
+    "calculation_logic": {
+      "abstract": "(Recovered Mineral Weight / Total Mineral in Ore) * 100",
+      "sql_standard": "(SUM(recovered_mineral_weight)/SUM(total_mineral_in_ore))*100",
+      "dax_pattern": "DIVIDE([Recovered Mineral Weight], [Total Mineral in Ore) * 100])"
+    },
     "owner": "TBD",
     "targetIndustries": [
       "Mining"
@@ -920,7 +1100,11 @@
     "metric_id": "5002",
     "name": "Tons Per Operating Hour",
     "domain": "Productivity",
-    "calculation_logic": "Total Tons Processed / Total Operating Hours",
+    "calculation_logic": {
+      "abstract": "Total Tons Processed / Total Operating Hours",
+      "sql_standard": "SUM(total_tons_processed)/SUM(total_operating_hours)",
+      "dax_pattern": "DIVIDE([Total Tons Processed], [Total Operating Hours])"
+    },
     "owner": "TBD",
     "targetIndustries": [
       "Mining"
@@ -939,7 +1123,11 @@
     "metric_id": "5003",
     "name": "Haul Truck Cycle Time",
     "domain": "Asset Productivity",
-    "calculation_logic": "Average(Return to Load Point Time - Departure from Load Point Time)",
+    "calculation_logic": {
+      "abstract": "Average(Return to Load Point Time - Departure from Load Point Time)",
+      "sql_standard": "SUM(average)(SUM(return_to_load_point_time)-SUM(departure_from_load_point_time))",
+      "dax_pattern": "[Average]([Return to Load Point Time]-[Departure from Load Point Time])"
+    },
     "owner": "TBD",
     "targetIndustries": [
       "Mining",
@@ -960,7 +1148,11 @@
     "metric_id": "6001",
     "name": "Project Schedule Performance Index (SPI)",
     "domain": "Project Management",
-    "calculation_logic": "Earned Value / Planned Value",
+    "calculation_logic": {
+      "abstract": "Earned Value / Planned Value",
+      "sql_standard": "SUM(earned_value)/SUM(planned_value)",
+      "dax_pattern": "DIVIDE([Earned Value], [Planned Value])"
+    },
     "owner": "TBD",
     "targetIndustries": [
       "Construction",
@@ -980,7 +1172,11 @@
     "metric_id": "6002",
     "name": "Construction Cost Performance Index (CPI)",
     "domain": "Project Management",
-    "calculation_logic": "Earned Value / Actual Cost",
+    "calculation_logic": {
+      "abstract": "Earned Value / Actual Cost",
+      "sql_standard": "SUM(earned_value)/SUM(actual_cost)",
+      "dax_pattern": "DIVIDE([Earned Value], [Actual Cost])"
+    },
     "owner": "TBD",
     "targetIndustries": [
       "Construction",
@@ -1001,7 +1197,11 @@
     "metric_id": "6003",
     "name": "Rework Rate",
     "domain": "Quality Management",
-    "calculation_logic": "(Hours Spent on Rework / Total Project Hours) * 100",
+    "calculation_logic": {
+      "abstract": "(Hours Spent on Rework / Total Project Hours) * 100",
+      "sql_standard": "(SUM(hours_spent_on_rework)/SUM(total_project_hours))*100",
+      "dax_pattern": "DIVIDE([Hours Spent on Rework], [Total Project Hours) * 100])"
+    },
     "owner": "TBD",
     "targetIndustries": [
       "Construction",
@@ -1022,7 +1222,11 @@
     "metric_id": "7001",
     "name": "Crop Yield Per Acre",
     "domain": "Production Efficiency",
-    "calculation_logic": "Total Harvest (bushels/tons) / Total Acres Planted",
+    "calculation_logic": {
+      "abstract": "Total Harvest (bushels/tons) / Total Acres Planted",
+      "sql_standard": "SUM(total_harvest)(SUM(bushels)/SUM(tons))/SUM(total_acres_planted)",
+      "dax_pattern": "[Total Harvest]([bushels]/[tons])/[Total Acres Planted]"
+    },
     "owner": "TBD",
     "targetIndustries": [
       "Agriculture"
@@ -1041,7 +1245,11 @@
     "metric_id": "7002",
     "name": "Feed Conversion Ratio",
     "domain": "Production Efficiency",
-    "calculation_logic": "Total Feed Consumed (kg) / Total Weight Gained (kg)",
+    "calculation_logic": {
+      "abstract": "Total Feed Consumed (kg) / Total Weight Gained (kg)",
+      "sql_standard": "SUM(total_feed_consumed)(SUM(kg))/SUM(total_weight_gained)(SUM(kg))",
+      "dax_pattern": "DIVIDE([Total Feed Consumed (kg], [Total Weight Gained (kg])"
+    },
     "owner": "TBD",
     "targetIndustries": [
       "Agriculture"
@@ -1060,7 +1268,11 @@
     "metric_id": "8001",
     "name": "Customer Satisfaction Score (CSAT)",
     "domain": "Customer Experience",
-    "calculation_logic": "(Number of Satisfied Customers / Total Survey Responses) * 100",
+    "calculation_logic": {
+      "abstract": "(Number of Satisfied Customers / Total Survey Responses) * 100",
+      "sql_standard": "(SUM(number_of_satisfied_customers)/SUM(total_survey_responses))*100",
+      "dax_pattern": "DIVIDE([Number of Satisfied Customers], [Total Survey Responses) * 100])"
+    },
     "owner": "TBD",
     "targetIndustries": [
       "All"
@@ -1080,7 +1292,11 @@
     "metric_id": "8002",
     "name": "Net Promoter Score (NPS)",
     "domain": "Customer Experience",
-    "calculation_logic": "% Promoters (9-10) - % Detractors (0-6)",
+    "calculation_logic": {
+      "abstract": "% Promoters (9-10) - % Detractors (0-6)",
+      "sql_standard": "SUM(%_promoters)(9-10)-SUM(%_detractors)(0-6)",
+      "dax_pattern": "[% Promoters](9-10)-[% Detractors](0-6)"
+    },
     "owner": "TBD",
     "targetIndustries": [
       "All"
@@ -1100,7 +1316,11 @@
     "metric_id": "8003",
     "name": "First Call Resolution Rate",
     "domain": "Customer Service",
-    "calculation_logic": "(Issues Resolved on First Contact / Total Issues) * 100",
+    "calculation_logic": {
+      "abstract": "(Issues Resolved on First Contact / Total Issues) * 100",
+      "sql_standard": "(SUM(issues_resolved_on_first_contact)/SUM(total_issues))*100",
+      "dax_pattern": "DIVIDE([Issues Resolved on First Contact], [Total Issues) * 100])"
+    },
     "owner": "TBD",
     "targetIndustries": [
       "All"
@@ -1120,7 +1340,11 @@
     "metric_id": "9001",
     "name": "Regulatory Compliance Rate",
     "domain": "Compliance & Risk",
-    "calculation_logic": "(Passed Audits / Total Audits) * 100",
+    "calculation_logic": {
+      "abstract": "(Passed Audits / Total Audits) * 100",
+      "sql_standard": "(SUM(passed_audits)/SUM(total_audits))*100",
+      "dax_pattern": "DIVIDE([Passed Audits], [Total Audits) * 100])"
+    },
     "owner": "TBD",
     "targetIndustries": [
       "All"
@@ -1141,7 +1365,11 @@
     "metric_id": "9002",
     "name": "Audit Findings Per Period",
     "domain": "Compliance & Risk",
-    "calculation_logic": "Count of Findings Requiring Action",
+    "calculation_logic": {
+      "abstract": "Count of Findings Requiring Action",
+      "sql_standard": "SUM(count_of_findings_requiring_action)",
+      "dax_pattern": "[Count of Findings Requiring Action]"
+    },
     "owner": "TBD",
     "targetIndustries": [
       "All"
@@ -1161,7 +1389,11 @@
     "metric_id": "10001",
     "name": "Carbon Footprint Per Product",
     "domain": "Sustainability",
-    "calculation_logic": "Total CO2 Equivalent Emissions / Total Units Produced",
+    "calculation_logic": {
+      "abstract": "Total CO2 Equivalent Emissions / Total Units Produced",
+      "sql_standard": "SUM(total_co2_equivalent_emissions)/SUM(total_units_produced)",
+      "dax_pattern": "DIVIDE([Total CO2 Equivalent Emissions], [Total Units Produced])"
+    },
     "owner": "TBD",
     "targetIndustries": [
       "All"
@@ -1181,7 +1413,11 @@
     "metric_id": "10002",
     "name": "Waste Diversion Rate",
     "domain": "Sustainability",
-    "calculation_logic": "(Waste Diverted / Total Waste Generated) * 100",
+    "calculation_logic": {
+      "abstract": "(Waste Diverted / Total Waste Generated) * 100",
+      "sql_standard": "(SUM(waste_diverted)/SUM(total_waste_generated))*100",
+      "dax_pattern": "DIVIDE([Waste Diverted], [Total Waste Generated) * 100])"
+    },
     "owner": "TBD",
     "targetIndustries": [
       "All"
@@ -1200,7 +1436,11 @@
     "metric_id": "10003",
     "name": "Renewable Energy Percentage",
     "domain": "Sustainability",
-    "calculation_logic": "(Renewable Energy Consumed / Total Energy Consumed) * 100",
+    "calculation_logic": {
+      "abstract": "(Renewable Energy Consumed / Total Energy Consumed) * 100",
+      "sql_standard": "(SUM(renewable_energy_consumed)/SUM(total_energy_consumed))*100",
+      "dax_pattern": "DIVIDE([Renewable Energy Consumed], [Total Energy Consumed) * 100])"
+    },
     "owner": "TBD",
     "targetIndustries": [
       "All"
@@ -1219,7 +1459,11 @@
     "metric_id": "11001",
     "name": "Warranty Claim Rate",
     "domain": "Quality Management",
-    "calculation_logic": "(Number of Warranty Claims / Total Products Sold) * 100",
+    "calculation_logic": {
+      "abstract": "(Number of Warranty Claims / Total Products Sold) * 100",
+      "sql_standard": "(SUM(number_of_warranty_claims)/SUM(total_products_sold))*100",
+      "dax_pattern": "DIVIDE([Number of Warranty Claims], [Total Products Sold) * 100])"
+    },
     "owner": "TBD",
     "targetIndustries": [
       "Heavy Manufacturing",
@@ -1240,7 +1484,11 @@
     "metric_id": "11002",
     "name": "Customer Retention Rate",
     "domain": "Customer Experience",
-    "calculation_logic": "((Customers at End - New Customers) / Customers at Start) * 100",
+    "calculation_logic": {
+      "abstract": "((Customers at End - New Customers) / Customers at Start) * 100",
+      "sql_standard": "((SUM(customers_at_end)-SUM(new_customers))/SUM(customers_at_start))*100",
+      "dax_pattern": "DIVIDE([Customers at End - New Customers], [Customers at Start) * 100])"
+    },
     "owner": "TBD",
     "targetIndustries": [
       "All"
@@ -1260,7 +1508,11 @@
     "metric_id": "12001",
     "name": "Labor Productivity",
     "domain": "Workforce Efficiency",
-    "calculation_logic": "Total Output (units/revenue) / Total Labor Hours",
+    "calculation_logic": {
+      "abstract": "Total Output (units/revenue) / Total Labor Hours",
+      "sql_standard": "SUM(total_output)(SUM(units)/SUM(revenue))/SUM(total_labor_hours)",
+      "dax_pattern": "[Total Output]([units]/[revenue])/[Total Labor Hours]"
+    },
     "owner": "TBD",
     "targetIndustries": [
       "All"
@@ -1279,7 +1531,11 @@
     "metric_id": "12002",
     "name": "Schedule Adherence",
     "domain": "Operational Efficiency",
-    "calculation_logic": "(Tasks Completed On Schedule / Total Planned Tasks) * 100",
+    "calculation_logic": {
+      "abstract": "(Tasks Completed On Schedule / Total Planned Tasks) * 100",
+      "sql_standard": "(SUM(tasks_completed_on_schedule)/SUM(total_planned_tasks))*100",
+      "dax_pattern": "DIVIDE([Tasks Completed On Schedule], [Total Planned Tasks) * 100])"
+    },
     "owner": "TBD",
     "targetIndustries": [
       "All"
@@ -1299,7 +1555,11 @@
     "metric_id": "13001",
     "name": "Equipment Reliability Factor",
     "domain": "Asset Reliability",
-    "calculation_logic": "(Actual Operating Time / Planned Operating Time) * 100",
+    "calculation_logic": {
+      "abstract": "(Actual Operating Time / Planned Operating Time) * 100",
+      "sql_standard": "(SUM(actual_operating_time)/SUM(planned_operating_time))*100",
+      "dax_pattern": "DIVIDE([Actual Operating Time], [Planned Operating Time) * 100])"
+    },
     "owner": "TBD",
     "targetIndustries": [
       "All"
@@ -1319,7 +1579,11 @@
     "metric_id": "14001",
     "name": "Quality Defect Rate",
     "domain": "Quality Management",
-    "calculation_logic": "(Number of Defects / Total Units Inspected) * 100",
+    "calculation_logic": {
+      "abstract": "(Number of Defects / Total Units Inspected) * 100",
+      "sql_standard": "(SUM(number_of_defects)/SUM(total_units_inspected))*100",
+      "dax_pattern": "DIVIDE([Number of Defects], [Total Units Inspected) * 100])"
+    },
     "owner": "TBD",
     "targetIndustries": [
       "All"
@@ -1339,7 +1603,11 @@
     "metric_id": "15001",
     "name": "Process Capability Index (Cpk)",
     "domain": "Quality Management",
-    "calculation_logic": "MIN((USL - Mean) / 3\u03c3, (Mean - LSL) / 3\u03c3)",
+    "calculation_logic": {
+      "abstract": "MIN((USL - Mean) / 3\u03c3, (Mean - LSL) / 3\u03c3)",
+      "sql_standard": "SUM(min)((SUM(usl)-SUM(mean))/SUM(3\u03c3,)(SUM(mean)-SUM(lsl))/SUM(3\u03c3))",
+      "dax_pattern": "[MIN](([USL]-[Mean])/[3\u03c3,]([Mean]-[LSL])/[3\u03c3])"
+    },
     "owner": "TBD",
     "targetIndustries": [
       "Heavy Manufacturing",
@@ -1360,7 +1628,11 @@
     "metric_id": "16001",
     "name": "Mean Time To Detect (MTTD)",
     "domain": "Incident Management",
-    "calculation_logic": "Sum of Detection Times / Number of Incidents",
+    "calculation_logic": {
+      "abstract": "Sum of Detection Times / Number of Incidents",
+      "sql_standard": "SUM(sum_of_detection_times)/SUM(number_of_incidents)",
+      "dax_pattern": "DIVIDE([Sum of Detection Times], [Number of Incidents])"
+    },
     "owner": "TBD",
     "targetIndustries": [
       "All"
@@ -1379,7 +1651,11 @@
     "metric_id": "17001",
     "name": "Asset Utilization Rate",
     "domain": "Asset Productivity",
-    "calculation_logic": "(Productive Time / Total Available Time) * 100",
+    "calculation_logic": {
+      "abstract": "(Productive Time / Total Available Time) * 100",
+      "sql_standard": "(SUM(productive_time)/SUM(total_available_time))*100",
+      "dax_pattern": "DIVIDE([Productive Time], [Total Available Time) * 100])"
+    },
     "owner": "TBD",
     "targetIndustries": [
       "All"
@@ -1398,7 +1674,11 @@
     "metric_id": "18001",
     "name": "Revenue Per Employee",
     "domain": "Workforce Efficiency",
-    "calculation_logic": "Total Revenue / Total Number of Employees",
+    "calculation_logic": {
+      "abstract": "Total Revenue / Total Number of Employees",
+      "sql_standard": "SUM(total_revenue)/SUM(total_number_of_employees)",
+      "dax_pattern": "DIVIDE([Total Revenue], [Total Number of Employees])"
+    },
     "owner": "TBD",
     "targetIndustries": [
       "All"
@@ -1418,7 +1698,11 @@
     "metric_id": "19001",
     "name": "Backlog-to-Revenue Ratio",
     "domain": "Business Health",
-    "calculation_logic": "Total Project Backlog / Annual Revenue",
+    "calculation_logic": {
+      "abstract": "Total Project Backlog / Annual Revenue",
+      "sql_standard": "SUM(total_project_backlog)/SUM(annual_revenue)",
+      "dax_pattern": "DIVIDE([Total Project Backlog], [Annual Revenue])"
+    },
     "owner": "TBD",
     "targetIndustries": [
       "Construction",
@@ -1440,7 +1724,11 @@
     "metric_id": "20001",
     "name": "Pipeline Integrity Index",
     "domain": "Asset Reliability",
-    "calculation_logic": "Weighted Average of (Inspection Results + Corrosion Rate + Leak Incidents)",
+    "calculation_logic": {
+      "abstract": "Weighted Average of (Inspection Results + Corrosion Rate + Leak Incidents)",
+      "sql_standard": "SUM(weighted_average_of)(SUM(inspection_results)+SUM(corrosion_rate)+SUM(leak_incidents))",
+      "dax_pattern": "[Weighted Average of]([Inspection Results]+[Corrosion Rate]+[Leak Incidents])"
+    },
     "owner": "TBD",
     "targetIndustries": [
       "Energy & Utilities"

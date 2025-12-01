@@ -50,23 +50,33 @@ Don't build another silo. Build on the Standard.
 
 # 🧩 Why now, why this?
 ![Infographic](https://res.cloudinary.com/dcfadz2uh/image/upload/v1764220237/infographic-bdm-potrait-reduced_flwuu3.jpg)
-> **The Open Standard for Headless Data Governance**  
-> Decouples Business Logic from BI Tools
-
-[![Build Status](https://img.shields.io/badge/build-passing-brightgreen)]()
-[![Standard](https://img.shields.io/badge/standard-ODGS_v1.0-blue)]()
-[![Maintained by](https://img.shields.io/badge/maintained%20by-QuirkySwirl-orange)](https://definitions.quirkyswirl.com)
+# ODGS: Open Data Governance Schema
+### The Protocol for Algorithmic Accountability
 
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-[![JSON](https://img.shields.io/badge/format-JSON-lightgrey)](https://json.org)
 
-## 📉 The Problem: Definition Drift
+**ODGS** is an open standard that decouples **business logic** from **execution engines** (like dbt, Power BI, or Tableau). It serves as the "Ground Truth" for Enterprise AI, ensuring that the context fed to LLMs is mathematically verifiable and consistent with business reality.
 
-In the modern data stack, business logic is fragmented. The definition of `Gross Margin` in dbt often conflicts with the DAX formula in Power BI, which differs from the calculation in Tableau.
+> **The Problem:** "Semantic Hallucination." When an AI Agent calculates "Churn Rate", does it use the Marketing definition (Power BI) or the Finance definition (Snowflake)? If it guesses, it hallucinates.
+>
+> **The Solution:** ODGS defines metrics *once* in a protocol-agnostic schema. It then **compiles** these definitions into the native languages of your tools (SQL, DAX, TMSL, YAML).
 
-**Result:** Executives don't trust the dashboard, and Data Engineers spend 40% of their time debugging "why the numbers don't match."
+## 🛡️ AI Safety & Governance
+ODGS is designed for **Algorithmic Accountability**. It provides:
+1.  **Provenance**: Every metric has a unique ID and owner, traceable back to the source.
+2.  **Consistency**: The AI, the Dashboard, and the Regulatory Report use the *exact same* logic.
+3.  **Auditability**: Changes to logic are Git-versioned and mathematically verified before deployment.
 
-## 🚀 The Solution: Write Once, Sync Everywhere
+## 🚀 The `odgs` CLI
+ODGS comes with a developer-first CLI to manage your governance layer.
+
+```bash
+# 1. Validate your schema for AI Safety compliance
+odgs validate
+
+# 2. Build artifacts for all downstream tools
+odgs build
+```
 ![Headless Data Governance](https://res.cloudinary.com/dcfadz2uh/image/upload/v1764172903/headless-data-governance_tbli5k.png)
 
 ```mermaid
@@ -184,9 +194,39 @@ from odgs import standard_metrics
 
 ## 🛠 Usage & Implementation
 
-### Option A: Build your own Sync Engine
+## 🔌 BI Adapters
 
-Fork this repository. Use these JSON files as the configuration layer in your CI/CD pipeline. Write Python/Node parsers to inject these definitions into your tools (dbt `schema.yml`, Power BI XMLA, etc.).
+The repository includes built-in adapters to generate configuration files for major BI tools:
+
+| Tool | Output Format | Script |
+| :--- | :--- | :--- |
+| **dbt MetricFlow** | `semantic_models.yml` | `adapters/dbt/generate_semantic_models.py` |
+| **Power BI** | `measures.tmsl.json` (TMSL) | `adapters/powerbi/generate_tmsl.py` |
+| **Tableau** | `metrics.tds` (XML) | `adapters/tableau/generate_tds.py` |
+
+### Generating Adapters
+
+Run the following commands to generate the configurations:
+
+```bash
+# Generate dbt MetricFlow YAML
+python3 adapters/dbt/generate_semantic_models.py
+
+# Generate Power BI TMSL
+python3 adapters/powerbi/generate_tmsl.py
+
+# Generate Tableau TDS
+python3 adapters/tableau/generate_tds.py
+```
+
+The generated files will be located in the `adapters/<tool>/` directories.
+
+**What is generated?**
+*   **Metrics**: Calculation logic (SQL/DAX) for all 72 standard metrics.
+*   **Reference Data**: Static tables for DQ Dimensions, Root Causes, and Business Processes.
+*   **Data Rules**:
+    *   **dbt**: Generic tests (`macros/odgs_tests.sql`) derived from standard rules.
+    *   **Power BI/Tableau**: Reference tables to join against.
 
 ### Option B: The Reference Implementation
 

@@ -9,12 +9,23 @@
             "type": "string"
         },
         "domain": {
-            "type": "string",
-            "enum": [
-                "Finance",
-                "Operations",
-                "Sales",
-                "HR"
+            "type": "string"
+        },
+        "calculation_logic": {
+            "type": "object",
+            "properties": {
+                "abstract": {
+                    "type": "string"
+                },
+                "sql_standard": {
+                    "type": "string"
+                },
+                "dax_pattern": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "abstract"
             ]
         },
         "owner": {
@@ -24,6 +35,8 @@
     "required": [
         "metric_id",
         "name",
+        "domain",
+        "calculation_logic",
         "owner"
     ]
 }
