@@ -183,13 +183,26 @@ const { standardMetrics } = require('odgs');
 
 ### PyPI (Python)
 
+### PyPI (Python)
+
 ```bash
-pip install odgs
+pip install "odgs[all]"
 ```
 
 Usage:
-```python
-from odgs import standard_metrics
+```bash
+# Initialize a new project
+odgs init my_governance_layer
+
+# Add a new metric
+cd my_governance_layer
+odgs add metric
+
+# Validate schema
+odgs validate
+
+# Build artifacts
+odgs build
 ```
 
 ## 🛠 Usage & Implementation

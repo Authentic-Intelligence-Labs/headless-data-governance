@@ -18,6 +18,13 @@ classifiers = [
 ]
 keywords = ["data-governance", "schema", "metrics", "kpi", "data-quality"]
 requires-python = ">=3.7"
+dependencies = [
+    "typer[all]",
+    "rich",
+]
+
+[project.scripts]
+odgs = "odgs.cli_main:app"
 
 [project.urls]
 "Homepage" = "https://github.com/Authentic-Intelligence-Labs/headless-data-governance"
