@@ -9,5 +9,7 @@ module.exports = {
   standardDqDimensions,
   standardDataRules,
   rootCauseFactors,
-  businessProcessMaps
+  businessProcessMaps,
+  physicalDataMap: require('./physical_data_map.json'),
+  ontologyGraph: require('./ontology_graph.json')
 };

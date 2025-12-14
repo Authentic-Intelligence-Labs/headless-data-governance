@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "odgs"
-version = "1.0.0"
+version = "1.2.0"
 description = "The Open Data Governance Schema (ODGS) - A vendor-neutral standard for business definitions."
 readme = "README.md"
 authors = [
@@ -21,6 +21,9 @@ requires-python = ">=3.7"
 dependencies = [
     "typer[all]",
     "rich",
+    "fastapi",
+    "uvicorn",
+    "pydantic"
 ]
 
 [project.scripts]

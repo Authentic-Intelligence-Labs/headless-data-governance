@@ -144,6 +144,8 @@ This repository contains the core schemas that define the "Alphabet" of Data Gov
 | **`standard_data_rules.json`** | Technical validation rules (Regex patterns, null checks, referential integrity). |
 | **`root_cause_factors.json`** | A standardized taxonomy for *why* data breaks (e.g., `Process_Gap` vs `Integration_Failure`). |
 | **`business_process_maps.json`** | Maps how data entities flow through the business lifecycle. |
+| **`physical_data_map.json`** | Maps abstract metrics to physical database tables/columns. |
+| **`ontology_graph.json`** | Defines relationships between business entities. |
 
 ## ✅ Validation & CI/CD Integration
 
