@@ -57,6 +57,18 @@ ODGS captures the *Authentic Intelligence* of your domain experts—the nuances,
 
 The Table Format War is over. The Semantic War has just begun.  
 Don't build another silo. Build on the Standard.
+
+---
+
+## 📚 Documentation
+
+Explore our comprehensive documentation suite:
+
+- **[Getting Started](docs/README.md)**: Quick overview, architecture, and installation
+- **[Complete Guide](docs/guide.md)**: In-depth technical guide from concept to implementation  
+- **[Strategic Vision](docs/vision.md)**: Market opportunity, AI Safety, and partnerships
+
+---
 # 🏛️ The Open Data Governance Schema (ODGS)
 ![What is it?](https://res.cloudinary.com/drsprx7wk/image/upload/v1764393765/BDM-1pagervisual_pszjuq.png)
 
@@ -219,7 +231,7 @@ odgs validate
 odgs build
 ```
 
-## 🛠 Usage & Implementation
+## � Usage & Implementation
 
 ## 🔌 BI Adapters
 
