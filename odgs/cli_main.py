@@ -52,6 +52,10 @@ def init(
         "quality_threshold": "99.0%",
         "status": "Active"
     }
+
+    # In a real package, we would copy these from the installed protocol/lib
+    # For now, we stub them empty or copy if they exist in the package
+    
     with open(os.path.join(base_path, "standard_metrics.json"), "w") as f:
         json.dump([sample_metric], f, indent=2)
 
@@ -66,8 +70,10 @@ def init(
     ]
     
     for p_file in protocol_files:
-        with open(os.path.join(base_path, p_file), "w") as f:
-            json.dump([], f, indent=2)
+        p_path = os.path.join(base_path, p_file)
+        # Verify if we can copy from source in future
+        with open(p_path, "w") as f:
+             json.dump([], f, indent=2)
 
     # Create odgs.json config
     config = {
