@@ -102,7 +102,7 @@ We welcome contributions! Whether you're:
 - **Engineers**: Building adapters for new tools (Looker, Qlik)  
 - **Domain Experts**: Refining the Root Cause taxonomy
 
-Please see [CONTRIBUTING.md](../CONTRIBUTING.md) for guidelines.
+Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 ---
 
