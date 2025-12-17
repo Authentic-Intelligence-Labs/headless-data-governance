@@ -1,4 +1,9 @@
 # The Complete ODGS Guide
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![Status](https://img.shields.io/badge/Status-Production%20Ready-success)]()
+[![AI Safety](https://img.shields.io/badge/AI%20Safety-EU%20AI%20Act%20Compliant-blueviolet)]()
+
+> **"The Protocol for Algorithmic Accountability"**
 
 **From Concept to Implementation**
 
