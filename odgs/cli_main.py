@@ -8,14 +8,14 @@ from rich.prompt import Prompt
 from rich.panel import Panel
 
 # Add project root to path to allow imports
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+# Note: sys.path hack removed as we are now a proper package
 
-from scripts.validate_schema import validate_all
-from adapters.dbt.generate_seeds import generate_seeds
-from adapters.dbt.generate_tests import generate_tests
-from adapters.dbt.generate_semantic_models import generate_dbt_semantic_models
-from adapters.powerbi.generate_tmsl import generate_powerbi_tmsl
-from adapters.tableau.generate_tds import generate_tableau_tds
+from .scripts.validate_schema import validate_all
+from .adapters.dbt.generate_seeds import generate_seeds
+from .adapters.dbt.generate_tests import generate_tests
+from .adapters.dbt.generate_semantic_models import generate_dbt_semantic_models
+from .adapters.powerbi.generate_tmsl import generate_powerbi_tmsl
+from .adapters.tableau.generate_tds import generate_tableau_tds
 
 app = typer.Typer(help="ODGS: The Protocol for Algorithmic Accountability")
 console = Console()

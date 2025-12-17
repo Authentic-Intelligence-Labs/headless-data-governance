@@ -1,10 +1,10 @@
 [build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
 
 [project]
 name = "odgs"
-version = "1.2.0"
+version = "1.2.1"
 description = "The Open Data Governance Schema (ODGS) - A vendor-neutral standard for business definitions."
 readme = "README.md"
 authors = [
@@ -35,7 +35,7 @@ odgs = "odgs.cli_main:app"
 
 [tool.setuptools.packages.find]
 where = ["."]
-include = ["odgs"]
+include = ["odgs*"]
 
 [tool.setuptools.package-data]
 odgs = ["*.json"]

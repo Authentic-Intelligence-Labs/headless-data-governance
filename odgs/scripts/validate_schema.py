@@ -2,8 +2,8 @@ import json
 import os
 import sys
 
-# Get project root (parent of scripts dir)
-PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# Get CWD as project root for CLI tool
+PROJECT_ROOT = os.getcwd()
 
 def load_json(filename):
     path = os.path.join(PROJECT_ROOT, filename)

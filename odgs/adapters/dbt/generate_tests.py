@@ -1,7 +1,7 @@
 import json
 import os
 
-PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+PROJECT_ROOT = os.getcwd()
 MACROS_DIR = os.path.join(PROJECT_ROOT, 'adapters', 'dbt', 'macros')
 RULES_FILE = os.path.join(PROJECT_ROOT, 'standard_data_rules.json')
 

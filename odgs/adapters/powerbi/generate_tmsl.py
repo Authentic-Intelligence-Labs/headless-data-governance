@@ -1,7 +1,7 @@
 import json
 import os
 
-PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+PROJECT_ROOT = os.getcwd()
 METRICS_FILE = os.path.join(PROJECT_ROOT, 'standard_metrics.json')
 OUTPUT_FILE = os.path.join(PROJECT_ROOT, 'adapters', 'powerbi', 'measures.tmsl.json')
 
@@ -122,6 +122,10 @@ in
             }
         }
     }
+
+    output_dir = os.path.dirname(OUTPUT_FILE)
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir)
 
     with open(OUTPUT_FILE, 'w') as f:
         json.dump(tmsl_model, f, indent=2)
