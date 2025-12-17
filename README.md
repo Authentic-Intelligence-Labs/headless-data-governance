@@ -1,5 +1,5 @@
 # Open Data Governance Schema (ODGS)
-![Explainer ODGS](https://res.cloudinary.com/drsprx7wk/image/upload/v1765401825/ODGS-Protocol_izdy4c.png)
+![Explainer ODGS](https://res.cloudinary.com/drsprx7wk/image/upload/v1765870417/Gemini_Generated_Image_mutio8mutio8muti_upzxae.png)
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Status](https://img.shields.io/badge/Status-Production%20Ready-success)]()
 [![AI Safety](https://img.shields.io/badge/AI%20Safety-EU%20AI%20Act%20Compliant-blueviolet)]()
@@ -20,6 +20,7 @@ Think of it as the **"Universal Remote for Data"**. Instead of programming the s
 - **For Data Teams**: Write definitions once, eliminate copy-paste SQL across tools  
 - **For AI Engineers**: Prevent "Semantic Hallucinations" by grounding LLMs in structured, verifiable context
 
+![EU AI Act Compliance](https://res.cloudinary.com/drsprx7wk/image/upload/v1765402023/EU-AI-Act-ODGS_ce3wuo.png)
 ---
 
 ## Architecture
