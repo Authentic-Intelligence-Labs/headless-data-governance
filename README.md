@@ -36,6 +36,7 @@ graph LR
 ```
 
 **Headless Governance** means decoupling the *Definition* (your business rules) from the *Tool* (Tableau, Power BI, etc.). ODGS acts as the compilation layer that transforms abstract logic into tool-native code.
+
 ![ODGS Protocol Architecture](https://res.cloudinary.com/drsprx7wk/image/upload/v1764513291/headless-architecure_ilnqfx.png)
 ---
 
