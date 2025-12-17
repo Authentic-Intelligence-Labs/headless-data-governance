@@ -17,9 +17,9 @@ We have spent the last decade solving the **Storage Problem**. Thanks to Apache 
 
 **But we are still failing at the Meaning Problem.**
 
-Ask your Data Engineer for "Gross Churn" and you get one number.  
-Ask your Tableau dashboard and you get another.  
-Ask your Finance team and you get a third.
+ - Ask your Data Engineer for "Gross Churn" and you get one number.  
+ - Ask your Tableau dashboard and you get another.  
+ - Ask your Finance team and you get a third.
 
 This is **Metric Drift**. In the traditional BI world, this was annoying—you had to have meetings to reconcile numbers. **In the age of AI, Metric Drift is fatal.**
 
@@ -54,6 +54,8 @@ ODGS captures the *Authentic Intelligence* of your domain experts—the nuances,
 ODGS is not a single product. It is a **set of ingredients** (JSON Schemas) that you can mix and match to build entirely different solutions.
 
 Think of it like **LEGO blocks** for Data Governance.
+
+![ODGS LEGO](https://res.cloudinary.com/drsprx7wk/image/upload/v1765401771/ODGS-Lego_y2tljx.png)
 
 #### The 4 Product Categories
 

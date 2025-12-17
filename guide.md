@@ -76,9 +76,9 @@ graph TD
     style CLI fill:#2196F3,color:white,stroke:#333,stroke-width:2px
 ```
 
-**Layer 1** stores the canonical definitions.  
-**Layer 2** validates and orchestrates builds.  
-**Layer 3** compiles to tool-native formats.
+ - **Layer 1** stores the canonical definitions.  
+ - **Layer 2** validates and orchestrates builds.  
+ - **Layer 3** compiles to tool-native formats.
 
 ---
 

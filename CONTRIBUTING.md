@@ -220,7 +220,7 @@ Contributors are recognized in:
 
 - **GitHub Discussions**: Ask questions in [Discussions](https://github.com/Authentic-Intelligence-Labs/headless-data-governance/discussions)
 - **Issues**: Report bugs in [Issues](https://github.com/Authentic-Intelligence-Labs/headless-data-governance/issues)
-- **Email**: For sensitive questions, email [contact email]
+- **Email**: For sensitive questions, email [partner@metricprovenance.com](mailto:partner@metricprovenance.com)
 
 ---
 
