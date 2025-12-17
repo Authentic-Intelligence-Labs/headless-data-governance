@@ -189,16 +189,16 @@ We are not building a proprietary engine; we are ratifying the **standard for Me
 
 **For Different Stakeholders:**
 
-#### For Researchers
+ - #### For Researchers
 Join us in defining the "Physics of AI Trust." Contribute to the academic validation of ODGS as a formal protocol for Algorithmic Accountability.
 
-#### For Enterprises
+ - #### For Enterprises
 Become a Design Partner. Secure your data stack against the EU AI Act before the enforcement deadline. Pilot ODGS to achieve Metric Provenance at scale.
 
-#### For Engineers
+ - #### For Engineers
 Fork the repo. Build adapters for Looker, Qlik, or Sisense. Own the standard. Your contributions directly shape the future of data governance.
 
-#### For Data Leaders
+ - #### For Data Leaders
 Stop buying "Semantic Layers" that lock you into a vendor. Adopt a **Headless Standard** that makes your definitions portable across every tool in your stack.
 
 #### For AI Engineers
