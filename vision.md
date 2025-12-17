@@ -151,15 +151,15 @@ If your AI Agent cannot prove *why* it gave a specific answer, you are non-compl
 
 ODGS is more than software; it is a research initiative for **Responsible AI**.
 
-#### TU Delft (Values, Technology & Innovation)
+ - #### TU Delft (Values, Technology & Innovation)
 
 We are aligning ODGS with the **Responsible Innovation** framework to provide a technical implementation for "Algorithmic Accountability." The goal is to verify that AI agents operating in high-stakes environments (logistics, finance) adhere to human-defined ethical boundaries.
 
-#### The Hague Security Delta (HSD)
+ - #### The Hague Security Delta (HSD)
 
 As part of the **Zuid-Holland AI Alliance**, ODGS positions itself as a practical tool for compliance with the **EU AI Act**. We provide the "Audit Trail" required for High-Risk AI Systems.
 
-#### TNO (Appl.AI)
+ - #### TNO (Appl.AI)
 
 Contributing to the "Responsible AI That Works" initiative by offering a concrete standard for data quality and provenance.
 
@@ -189,7 +189,7 @@ We are not building a proprietary engine; we are ratifying the **standard for Me
 
 **For Different Stakeholders:**
 
- - #### For Researchers
+ - #### For Researchers: 
 Join us in defining the "Physics of AI Trust." Contribute to the academic validation of ODGS as a formal protocol for Algorithmic Accountability.
 
  - #### For Enterprises
@@ -201,10 +201,10 @@ Fork the repo. Build adapters for Looker, Qlik, or Sisense. Own the standard. Yo
  - #### For Data Leaders
 Stop buying "Semantic Layers" that lock you into a vendor. Adopt a **Headless Standard** that makes your definitions portable across every tool in your stack.
 
-#### For AI Engineers
+ - #### For AI Engineers
 Don't let your agents fly blind. Give them the **Context & Diagnosis** layer they need to reason effectively and comply with regulations.
 
-#### For Regulators
+ - #### For Regulators  
 Demand "Glass Box" transparency. If an AI cannot cite the provenance of its answer, it should not be answering high-risk questions.
 
 ---
@@ -240,4 +240,4 @@ By treating Governance not as a policy document, but as **executable code**, ODG
 
 **The ingredients are ready. The recipes are proven. It's time to stop building the tower, and start speaking the same language.**
 
-**Adopt the Protocol.**
+[**Adopt the Protocol**](https://www.metricprovenance.com/)
