@@ -1,5 +1,5 @@
 # Open Data Governance Schema (ODGS)
-![Explainer ODGS](https://res.cloudinary.com/drsprx7wk/image/upload/v1765870417/Gemini_Generated_Image_mutio8mutio8muti_upzxae.png)
+![Explainer ODGS](https://res.cloudinary.com/drsprx7wk/image/upload/v1765951443/ODGS-explainer_ugwrqz.png)
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![Status](https://img.shields.io/badge/Status-Production%20Ready-success)]()
 [![AI Safety](https://img.shields.io/badge/AI%20Safety-EU%20AI%20Act%20Compliant-blueviolet)]()
