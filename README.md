@@ -11,7 +11,7 @@
 > This is the v1.x Standard Edition (Flat JSON) - the lightweight, non-cryptographic version for AI Chatbots or RAG Copilots (v1.2.x). 
 > For the v2.x Sovereign Edition (Cryptographic Enforcement & Article 10 Compliance), please visit the [Protocol Repository](https://github.com/MetricProvenance/odgs-protocol).
 > *   **Install v1 (This Repo):** `pip install "odgs<2"`
-> *   **Install v2 :** `pip install odgs` (default)
+> *   **Install v3 :** `pip install odgs` (default)
 ### The Sovereign Engine for Semantic Integrity in High-Risk AI Systems
 ---
 ## What is ODGS?
